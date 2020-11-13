@@ -1,2 +1,2 @@
-# Image-Search
-Working with the Unsplash API to search for any image.
+
+Search bar implementation with the Unsplash API to return a list of images.
