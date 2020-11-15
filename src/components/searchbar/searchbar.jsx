@@ -1,0 +1,32 @@
+import React from 'react';
+import 'semantic-ui-css/semantic.min.css';
+
+export default class Searchbar extends React.Component {
+  state = {
+    term: ""
+  }
+
+  onformSubmit = (e) => {
+    e.preventDefault();
+    this.props.onSearchSubmit(this.state.term);
+  }
+
+  recordTerm = (e) => {
+    this.setState({
+      term: e.target.value
+    });
+  }
+
+  render() {
+    return (
+      <div className="ui segment" style={{ top: "10px", margin: "0 0 20px 0" }}>
+        <form className="ui form" onSubmit={this.onformSubmit}>
+          <div className="field">
+            <label> Image Search </label>
+            <input type="text" onChange={this.recordTerm} />
+          </div>
+        </form>
+      </div>
+    );
+  }
+}
