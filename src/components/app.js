@@ -9,11 +9,12 @@ import '../styles/app.css'
 
 export default class App extends React.Component {
   state = {
-    images: []
+    images: [],
+    imagesReference: []
   }
 
-  onSearchSubmit = async term => {
-    const response = await Axios.get('https://api.unsplash.com/search/photos', {
+  onSearchSubmit = async term => { // called by child component: <Searchbar /> on submit/enter
+    const response = await Axios.get('https://api.unsplash.com/search/photos?per_page=15?', {
       params: { query: term },
       headers: {
         Authorization: process.env.REACT_APP_UNSPLASH_KEY
@@ -21,7 +22,8 @@ export default class App extends React.Component {
     });
 
     this.setState({
-      images: response.data.results
+      images: response.data.results,
+      imagesReference: response.data.results
     });
   }
 
@@ -30,7 +32,7 @@ export default class App extends React.Component {
       <div className="App">
         <div className="ui container">
           <Searchbar onSearchSubmit={this.onSearchSubmit} />
-          <ImageList images={this.state.images} />
+          <ImageList app={this} images={this.state.images} />
         </div>
       </div>
     );
