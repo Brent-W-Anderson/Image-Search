@@ -8,6 +8,7 @@
     color: gainsboro;
     padding-bottom: 10px; }
   .ui.segment .ui.form .field input {
+    text-align: center;
     background-color: gainsboro;
     color: #191919;
     font-size: 1.2em;
