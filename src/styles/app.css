@@ -5,7 +5,7 @@ body {
 
 .App {
   position: fixed;
-  overflow-y: auto;
+  overflow-y: scroll;
   background-color: rgba(0, 0, 0, 0.5);
   background-image: radial-gradient(circle at 50% 0%, #008aa2 500px, white 501px, white 505px, transparent 506px, transparent 100%), url("../content/images/textured-background.png");
   width: 100%;
