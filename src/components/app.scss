@@ -1,32 +1,91 @@
+
+@keyframes rotate-clockwise {
+  0%   {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
 body {
   position: absolute;
   width: 100%;
   background-color: rgba(#191919, .8);
 }
 
-.App {
-  position: fixed;
-  overflow-y: scroll;
-  background-color: rgba(black, .5);
-  background-image: radial-gradient(circle at 50% 0%, #008aa2 500px, white 501px, white 505px, transparent 506px, transparent 100%),
-  url('../content/images/textured-background.png');
+.app-container {
+  position: absolute;
   width: 100%;
-  height: -webkit-fill-available;
+  height: 100%;
+  overflow: hidden;
 
-  &::-webkit-scrollbar {
-    width: 20px;
-  }
+  .App {
+    position: absolute;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 100%;
+    height: -webkit-fill-available;
 
-  &::-webkit-scrollbar-thumb {
-    background: rgba(#008aa2, .3);
-    border-radius: 4px;
-
-    &:hover {
-      background: rgba(#008aa2, .4);
+    &::-webkit-scrollbar {
+      width: 20px;
     }
 
-    &:active {
-      background: rgba(#008aa2, .5);
+    &::-webkit-scrollbar-thumb {
+      background: rgba(#008aa2, .3);
+      border-radius: 4px;
+
+      &:hover {
+        background: rgba(#008aa2, .4);
+      }
+
+      &:active {
+        background: rgba(#008aa2, .5);
+      }
+    }
+
+    .ui.container {
+      p.message {
+        user-select: none;
+        text-align: center;
+        color: #008aa2;
+        font-size: 1.5em;
+        font-weight: 900;
+        margin-bottom: 55px;
+        padding: 15px;
+        text-shadow: 0 0 1px white;
+      }
+    }
+  }
+
+  .animated-header {
+    position: fixed;
+    background-color: rgba(black, .5);
+    background-image: url('../content/images/textured-background.png');
+    margin-left: -50000px;
+    margin-top: -50000px;
+    width: 100000px;
+    height: 100000px;
+    animation-name: rotate-clockwise;
+    animation-duration: 600s;
+    animation-iteration-count: infinite;
+  }
+
+  .background-static {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #191919;
+    border-top: 2px solid rgba(#008aa2, .7);
+    top: 215px;
+    min-height: 1300px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .app-container {
+    .App {
+      .ui.container {
+        p.message {
+          font-size: 1.2em;
+        }
+      }
     }
   }
 }

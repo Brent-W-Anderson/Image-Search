@@ -29,10 +29,15 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
-        <div className="ui container">
-          <Searchbar onSearchSubmit={this.onSearchSubmit} />
-          <ImageList app={this} images={this.state.images} />
+      <div className="app-container">
+        <div className="animated-header"/>
+        <div className="background-static" />
+        <div className="App">
+          <div className="ui container">
+            <Searchbar onSearchSubmit={this.onSearchSubmit} />
+            <p className="message"> Welcome to Brents version of using the Unsplash API </p>
+            <ImageList app={this} images={this.state.images} />
+          </div>
         </div>
       </div>
     );

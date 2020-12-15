@@ -11,10 +11,9 @@
     width: fit-content;
     height: fit-content;
     background-color: white;
-    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 3px 8px rgba(255, 255, 255, 0.3);
     border: 2px solid rgba(0, 138, 162, 0.4);
     border-radius: 5px;
-    overflow: hidden;
     transition: .2s; }
     .image-list .image-card.selected:hover {
       transform: scale(1.005); }
@@ -25,15 +24,16 @@
       .image-list .image-card .tags P {
         position: absolute;
         text-align: center;
-        width: 100%;
+        width: calc(100% + 4px);
         padding: 5px;
         letter-spacing: .6px;
         word-spacing: 1px;
         font-size: 1em;
-        background-color: rgba(25, 25, 25, 0.6);
+        background-color: rgba(0, 138, 162, 0.6);
         border-radius: 4px 4px 0 0;
-        text-shadow: 0 0 2px #191919;
-        color: white; }
+        text-shadow: 0 0 1px #191919;
+        color: white;
+        margin: -2px; }
         .image-list .image-card .tags P:empty {
           padding: 0; }
     .image-list .image-card img {

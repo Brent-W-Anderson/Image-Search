@@ -2,7 +2,7 @@
 .ui.segment {
   border: 2px solid rgba(#008aa2, .7);
   background-color: rgba(#191919, .7);
-  box-shadow: 0 5px 10px rgba(white, .3);
+  box-shadow: 0 3px 7px rgba(white, .3);
 
   .ui.form {
     .field {
@@ -14,7 +14,6 @@
       }
 
       input {
-        text-align: center;
         background-color: rgb(220, 220, 220);
         color: #191919;
         font-size: 1.2em;

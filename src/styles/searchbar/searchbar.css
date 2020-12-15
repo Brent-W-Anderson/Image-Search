@@ -1,14 +1,13 @@
 .ui.segment {
   border: 2px solid rgba(0, 138, 162, 0.7);
   background-color: rgba(25, 25, 25, 0.7);
-  box-shadow: 0 5px 10px rgba(255, 255, 255, 0.3); }
+  box-shadow: 0 3px 7px rgba(255, 255, 255, 0.3); }
   .ui.segment .ui.form .field label {
     text-align: center;
     font-size: 1.2em;
     color: gainsboro;
     padding-bottom: 10px; }
   .ui.segment .ui.form .field input {
-    text-align: center;
     background-color: gainsboro;
     color: #191919;
     font-size: 1.2em;

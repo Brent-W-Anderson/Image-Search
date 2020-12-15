@@ -21,7 +21,7 @@ export default class Searchbar extends React.Component {
 
   render() {
     return (
-      <div className="ui segment" style={{ top: "10px", margin: "0 0 30px 0" }}>
+      <div className="ui segment" style={{ top: "30px", margin: "0 0 30px 0" }}>
         <form className="ui form" onSubmit={this.onformSubmit}>
           <div className="field">
             <label> Image Search </label>
