@@ -27,6 +27,10 @@ body {
       width: 20px;
     }
 
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
     &::-webkit-scrollbar-thumb {
       background: rgba(#008aa2, .3);
       border-radius: 4px;
@@ -71,7 +75,7 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #191919;
+    background-color: lighten(#191919, 5%);
     border-top: 2px solid rgba(#008aa2, .7);
     top: 215px;
     min-height: 1300px;
